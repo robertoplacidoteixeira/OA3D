@@ -1,0 +1,58 @@
+﻿body {
+   position: absolute;
+   top: 0px;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   margin: 0px; 
+   overflow: hidden;
+}
+
+.divLinhaElemento {
+   clear: both;
+   height: 300px;
+}
+
+.divColunaElemento {
+   float: left;
+   width: 300px;
+   height: 300px;
+}
+
+.canvasColunaElemento {
+   height: 300px;
+   width: 300px;
+}
+
+.classTabelaPeriodica {
+   position: absolute;
+   top: 0px;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+ /*height: 500px;
+   width: 200px;
+   background-color: yellow;*/
+   z-index: 10;
+}
+
+#id-botao-fechar {
+   position: absolute; 
+   bottom: 0px; 
+   left: 0px;
+   height: 125px;
+   width: 125px;
+   opacity: 0.0;
+}
+ 
+ #id-div-arvore-elemento {
+   position: absolute; 
+   /*right: 0px;
+   top: 0px;*/
+   height: 400px;
+   width: 400px;
+   bottom: 20px;
+   left: 20px;*/
+ }
+ 
+ 

@@ -1,0 +1,382 @@
+
+#id-botao-ver-tabela-periodica {
+   display: block;
+   position: relative;
+   left: 0px;
+   top: 0px;
+   width: 65px;
+   height: 40px;
+}
+
+#id-configuracao {
+   display: block;
+   font-family:  Arial, Verdana, Times New Roman;
+   padding: 5px 5px 5px 5px;
+   border: 1px solid black;
+   position:  absolute;      
+   top: 10px;
+   left: 10px;      
+   width: auto;      
+   background: #88888850;
+   z-index:  20;
+}
+
+#id-div-tabela-periodica {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 320px;
+   font-size: 7px;
+   /*padding: 10px;*/
+}
+
+#id-tabela-periodica {
+   display: none;
+    background: white;
+    border: 1px solid;
+/*
+   border-collapse: collapse;
+   margin: 0.5ex auto 0;
+   clear: both
+*/
+}
+thead td,
+.familia {
+   height: auto;
+   border-bottom: thick solid white
+}
+
+.familia {
+   color: #04336B;
+   vertical-align: bottom;
+   font-size: 7px;
+   font-weight: bold;
+   text-align: center
+}
+
+thead a,
+.periodos a,
+.familia a {
+   font-size: 7px;
+   font-weight: bold;
+   text-align: center
+}
+
+thead a,
+.periodos a,
+#series a,
+.familia a {
+   display: block;
+   text-decoration: none;
+   color: black
+}
+
+.periodos {
+   font-size: 7px
+}
+
+.elemento {
+   text-align: center;
+   background-color: #DDD
+}
+
+.alcalino .alcalino {
+   background-color: #FA0
+}
+
+.alcalino-terroso .alcalino-terroso {
+   background-color: #F3F300
+}
+
+.lantanideo .lantanideo {
+   background-color: #FA8
+}
+
+.actinideo .actinideo {
+   background-color: #DAC
+}
+
+.metal-transicao .metal-transicao {
+   background-color: #D99
+}
+
+.semi-metal .semi-metal {
+   background-color: #5C8
+}
+
+.metal-representativo .metal-representativo {
+   background-color: #9BA
+}
+
+.nao-metal .nao-metal {
+   background-color: #0E0
+}
+
+.halogenio .halogenio {
+   background-color: #0DB
+}
+
+.gas-nobre .gas-nobre {
+   background-color: #6AF
+}
+
+label,
+.periodos a,
+thead a,
+.familia a {
+   color: #04336B
+}
+
+.branco {
+   border-left: thick solid white
+}
+
+.elemento,
+.distribuicao {
+   border: thick solid white
+}
+
+.distribuicao {
+   display: none;
+   color: gray;
+   padding-top: 0.2em
+}
+
+.elemento,
+.branco,
+.distribuicao,
+thead td,
+.familia {
+   border-width: 2px
+}
+
+thead td {
+   border-right: 1pt solid #CCF
+}
+
+.elemento a {
+   text-decoration: none;
+   display: block;
+   padding: 0;
+   color: black
+}
+
+small,
+big {
+   display: -moz-inline-block;
+   display: inline-block;
+   font-size: 7px;
+   text-align: center
+}
+
+abbr,
+em,
+i {
+   display: block
+}
+
+.elemento abbr {
+   font-size: 1.1em;
+   font-weight: bold;
+   /*width: 2.6em*/
+}
+
+em,
+.elemento i {
+   font-size: 0.56em;
+   font-style: normal
+}
+
+.elemento em {
+   display: none
+}
+
+em.Long {
+   letter-spacing: -1px
+}
+
+em,
+.elemento i {
+   /*width: 5.57em*/
+}
+
+em,
+i {
+   overflow: hidden;
+   text-overflow: ellipsis
+}
+
+.elemento {
+   /* padding: 2px 3px 1px 4px; */
+   white-space: nowrap
+}
+
+small {
+   font-size: 0.52em;
+   text-align: right;
+   line-height: 1;
+   /*width: 1em*/
+}
+
+big,
+small,
+.distribuicao {
+   vertical-align: top
+}
+
+.distribuicao small {
+   width: auto
+}
+
+.numero-atomico {
+   display: block;
+   font-size: 7px;
+}
+
+.remover {
+   display: none
+}
+
+.ocultar {
+   visibility: hidden
+}
+
+.solido,
+.solido abbr {
+   color: Black
+}
+
+.liquido,
+.liquido abbr {
+   color: Red
+}
+
+.gasoso,
+.gasoso abbr {
+   color: Blue
+}
+
+.desconhecido,
+.desconhecido abbr {
+   color: Gray
+}
+
+#InformacaoHolder {
+   width: 37px;
+   height: 100%;
+   background-color: White;
+   border: 1px solid #000
+}
+
+#Informacao-elemento {
+   line-height: 15px
+}
+
+#Informacao-elemento strong {
+   vertical-align: top;
+   font-size: 0.9em;
+   font-weight: normal
+}
+
+#Informacao-elemento abbr {
+   font-size: 1.2em;
+   font-weight: bold
+}
+
+#Informacao-elemento em {
+   display: none;
+   font-size: 1.2em;
+   margin-top: -9px
+}
+
+#Informacao-elemento i {
+   font-size: 0.8em
+}
+
+#Informacao-elemento small {
+   font-size: 0.6em;
+   margin-top: 3px;
+   text-align: center;
+   /*width: 7px*/
+}
+
+.legenda-elementos {
+   /*
+   width: 7px;
+   height: 7px
+   */
+}
+
+.desc-legenda-elementos {
+   /*width: 180px;*/
+   font-size: 0.9em;
+   /*height: 7px*/
+}
+
+.desc-legenda-elementos2 {
+   /*width: 170px;*/
+   font-size: 0.9em;
+   /*height: 7px*/
+}
+
+.legenda-estados {
+   background-color: White;
+   border: 1px solid #000;
+   /*width: 7px;*/
+   /*height: 7px*/
+   text-align: center
+}
+
+.desc-legenda-estados {
+   height: 7px
+}
+
+.series a:hover {
+   text-decoration: none;
+   font-weight: bold !important;
+   font-size: 15px
+}
+
+.borda-topo {
+   border-top: 5px solid blue
+}
+
+.borda-base {
+   border-bottom: 5px solid blue
+}
+
+.borda-direita {
+   border-right: 5px solid blue
+}
+
+.borda-esquerda {
+   border-left: 5px solid blue
+}
+
+.borda {
+   outline: 4px solid #054c6c;
+   *filter: alpha(Opacity=50)
+}
+
+.fosco a {
+   opacity: 0.15;
+   filter: alpha(Opacity=15);
+   *zoom: 1
+}
+
+.normal a {
+   opacity: 1;
+   filter: alpha(Opacity=100);
+   *zoom: 1
+}
+
+.destaque,
+.destaque a {
+   background-color: #054c6c;
+   text-decoration: none;
+   color: #FFF
+}
+
+#lista-estados {
+   background-color: white
+}
