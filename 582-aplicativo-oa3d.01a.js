@@ -6,7 +6,7 @@
 		this.objAtomo = undefined;
 		this.mostrar = true;
 		this.parado = true;
-		this.criarArvore = true;
+		this.criarArvore = false; 
 		this.autoRotacionar = false;
 		this.nodoNiveis = null;
 		this.nodoNivel = null;
@@ -24,11 +24,12 @@
 			cpy: this.pe.cpy, 
 			cpz: this.pe.cpz,
 			zElemento: this.atualZ});
+		this.criarAtomo(this.pe.zElemento);
 		this.filme = new Filme({
 			cenario: this.cenario, 
+			alvo: this.cenario.cena,
 			idContainer: "id-modelo-orbital-3d",
 			ativarEstatistica: false});
-		this.criarAtomo(this.pe.zElemento);
 	}
 
 	depoisCriar() {
@@ -106,7 +107,7 @@
 	onWindowUnload() {
 	}
 
-	carregarDadosElemento(){	
+	carregarDadosElemento() {	
 		var indice = this.atualZ-1;
 		var elemento = dadosElementos[simbolosElementos[indice]];
 		for (var dado in elemento) {
@@ -118,80 +119,89 @@
 	}
 
 	dadosElementoOpaco() {
-		this.parado = false;
+		var t = this;
+		t.parado = false;
 		$("#id-botao-ver-dados-elemento").fadeOut(2000,"swing",function(){
 			$("#dados_el_id_todos").fadeIn(2000,"swing",function(){
-				this.parado = true; this.mostrar = false
+				t.parado = true; t.mostrar = false
 			});
 		});
 	}
 
 	dadosElementoTransparente() {
-		this.parado = false;
+		var t = this;
+		t.parado = false;
 		$("#dados_el_id_todos").fadeOut(2000,"swing",function(a,b,c,d){
-			this.parado = true; 
-			this.mostrar = true;	
+			t.parado = true; 
+			t.mostrar = true;	
 			$("#id-botao-ver-dados-elemento").fadeIn(2000,"swing",function(){
 				$("#dados_el_id_modal").on("click",function(){
-					if (this.parado) if (this.mostrar) this.dadosElementoOpaco(); else this.dadosElementoTransparente();
+					if (t.parado) if (t.mostrar) t.dadosElementoOpaco(); else t.dadosElementoTransparente();
 				});
 				$("#id-botao-ver-dados-elemento").on("click",function(){
-					if (this.parado) if (this.mostrar) this.dadosElementoOpaco();
+					if (t.parado) if (t.mostrar) t.dadosElementoOpaco();
 				});
 				$(".elemento").on("click",function(evento){
-					this.objAtomo.destruir();
-					this.objAtomo = undefined;
-					this.criarAtomo(evento.currentTarget.attributes.z.nodeValue)
+					t.cenario.cena.remove(t.objAtomo.atomo3d);
+					t.objAtomo.destruir();
+					t.objAtomo = undefined;
+					t.criarAtomo(evento.currentTarget.attributes.z.nodeValue);
+					t.carregarDadosElemento();
+					t.cenario.cena.add(t.objAtomo.atomo3d);
 				});
 			});
 		});
 	}
 
 	tabelaPeriodicaOpaco(){
-		this.parado = false;
+		var t = this;
+		t.parado = false;
 		$("#id-botao-ver-tabela-periodica").fadeOut(2000,"swing",function(){
 			$("#id-tabela-periodica").fadeIn(2000,"swing",function(){
-				this.parado = true; this.mostrar = false
+				t.parado = true; t.mostrar = false
 			});
 		});
 	}
 
 	tabelaPeriodicaTransparente() {
-		this.parado = false;
+		var t = this;
+		t.parado = false;
 		$("#id-tabela-periodica").fadeOut(2000,"swing",function(){
-			this.parado = true; 
-			this.mostrar = true;	
+			t.parado = true; 
+			t.mostrar = true;	
 			$("#id-botao-ver-tabela-periodica").fadeIn(2000,"swing",function(){
 				$("#id-tabela-periodica").on("click",function(){
-					if (this.parado) if (this.mostrar) this.tabelaPeriodicaOpaco(); else this.tabelaPeriodicaTransparente();
+					if (t.parado) if (t.mostrar) t.tabelaPeriodicaOpaco(); else t.tabelaPeriodicaTransparente();
 				});
 				$("#id-botao-ver-tabela-periodica").on("click",function(){
-					if (this.parado) if (this.mostrar) this.tabelaPeriodicaOpaco();
+					if (t.parado) if (t.mostrar) t.tabelaPeriodicaOpaco();
 				});
 			});
 		});
 	}
 
 	aumentar() {
-		this.parado = false;
+		var t = this;
+		t.parado = false;
 		$("#dados_el_id_modal").animate({right: "10px"},2000,"swing",
 			function(){
-				this.parado = true; 
-				this.mostrar = false
+				t.parado = true; 
+				t.mostrar = false
 			});
 	}
 
 	diminuir() {
-		this.parado = false;
+		var t = this;
+		t.parado = false;
 		$("#dados_el_id_modal").animate({right: "-370px"},2000,"swing",function(){
-			this.parado = true; 
-			this.mostrar = true;	
+			t.parado = true; 
+			t.mostrar = true;	
 			$("#dados_el_id_modal").on("click",function(){
-				if (this.parado)
-					if (this.mostrar) 
-						this.aumentar(); 
+				if (t.parado)
+					if (t.mostrar) 
+						t.aumentar(); 
 					else 
-						this.diminuir();
+						t.diminuir();
 			});
 		});
 	}

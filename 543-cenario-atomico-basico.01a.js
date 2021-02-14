@@ -60,6 +60,9 @@
 		this.pontoLuz5 = criarPontoLuz(0xffffff,0,0,distanciaPontoLuz);
 		this.pontoLuz6 = criarPontoLuz(0xffffff,0,0,-distanciaPontoLuz);
 	}
+	
+	ajustarDistanciaLuzes() {
+	}
 
 	criarControle() {
 		return null; // new MapaControleOrbital(this.camera);

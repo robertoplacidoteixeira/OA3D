@@ -47,7 +47,7 @@
 		renderer.gammaInput = true;
 		renderer.gammaOutput = true;
 		this.container.appendChild(renderer.domElement);	
-		this.controle = new MapaControleOrbital(this.camera,renderer.domElement);
+		this.controle = new MapaControleOrbital(this.camera,this.alvo,renderer.domElement);
 		this.renderer = renderer;
 	}      
 
