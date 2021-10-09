@@ -1,0 +1,183 @@
+﻿body {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0px; 
+	overflow: hidden;
+	z-index: 0;
+}
+
+#id-modelo-orbital-3d {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0px; 
+	overflow: hidden;
+	z-index: 10;
+}
+
+#id-controle-menu {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	height: 50px;
+	opacity: 0.5;
+	border-bottom: 3px;
+	border-bottom-color: 3px;
+	z-index: 120;
+}
+
+#id-div-controle-arvore {
+	display: none;
+	position: absolute;
+	border-left: 3px;
+	top: 70px;
+	width: auto;
+	bottom: 0px;
+	left: 10px;
+	z-index: 30;
+}
+ 
+#id-arvore {
+	position: absolute;
+	top: 0px;
+	width: 260px;
+	bottom: 30px;
+	left: 0px;
+	overflow-y: auto;
+}
+
+#id-rodape-arvore {
+	position: absolute;
+	width: 260px;
+	bottom: 0px;
+	height: 30px;
+	left: 0px;
+}
+
+#id-div-tabela-periodica {
+	display: none;
+}
+
+#id-div-dados-elemento {
+	display: none;
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    top: 70px;
+    left: 10px;
+    font-size: 12px;
+    z-index: 5000;
+	overflow-y: auto;
+}
+
+#id-div-ajuda {
+	display: none;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+	bottom: 10px;
+	right: 10px;
+    font-size: 12px;
+    z-index: 15000;
+	overflow-y: auto;
+	opacity: 1;
+	background-color: #BBBBBB;
+	border: 1px solid #000000;
+	padding: 5px;
+}
+
+.divLinhaElemento {
+	clear: both;
+	height: 300px;
+}
+
+.divColunaElemento {
+	float: left;
+	width: 300px;
+	height: 300px;
+}
+
+.canvasColunaElemento {
+	height: 300px;
+	width: 300px;
+}
+
+.classTabelaPeriodica {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	/*height: 500px;
+	width: 200px;
+	background-color: yellow;*/
+	z-index: 10;
+}
+
+#id-botao-fechar {
+	position: absolute; 
+	bottom: 0px; 
+	left: 0px;
+	height: 125px;
+	width: 125px;
+	opacity: 0.0;
+}
+
+
+
+#id-div-rpt {
+	position: absolute;
+	top: 50px;
+	right: 210px;
+	height: 45px;
+	width: 200px;
+	font-family: Arial, Verdana, Times New Roman;
+	font-size: 0.8em;
+	z-index: 11000;
+}
+
+#id-div-versao {
+	position: absolute;
+	top: 50px;
+	right: 10px;
+	height: 30px;
+	width: 200px;
+	font-family: Arial, Verdana, Times New Roman;
+	font-size: 0.8em;
+	z-index: 11000;
+}
+
+#id-div-dados-basicos-elemento {
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	right: 0px;
+	height: 30px;
+	font-family: Arial, Verdana, Times New Roman;
+	font-size: 0.8em;
+	z-index: 10000;
+}
+
+.dbe-label {
+	float: left;
+	background-color: #DDDDDD;
+	opacity: 0.6;
+	margin-left: 5px;
+    padding: 2px 5px;
+}
+
+.dbe-valor {
+	float: left;
+	background-color: #EEEEEE;
+	opacity: 0.6;
+	margin-left: 5px;
+    padding: 2px 5px;
+}
+

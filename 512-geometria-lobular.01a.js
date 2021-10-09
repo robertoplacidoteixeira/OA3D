@@ -1,2 +1,0 @@
-﻿class GeometriaLobular extends Geometria {	
-}

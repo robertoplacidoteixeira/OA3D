@@ -1,0 +1,32 @@
+{
+	"uploadOnSave": true,
+	"autoDelete": true,
+	"activeTargets": [
+		"FTP RPT"
+	],
+	"concurrency": 5,
+	"ignore": [
+		".git/**/*",
+		".vscode/**/*"
+	],
+	"targets": [
+		{
+			"name": "FTP RPT",
+			"type": "ftp",
+			"host": "rpt.com.br",
+			"port": 21,
+			"user": "u576255937",
+			"password": "?Rpt64629402",
+			"dir": "/"
+		},
+		{
+			"name": "SFTP RPT",
+			"type": "sftp",
+			"host": "rpt.com.br",
+			"port": 22,
+			"user": "u576255937",
+			"password": "?Rpt64629402",
+			"dir": "/"
+		}
+	]
+}

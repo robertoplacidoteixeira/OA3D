@@ -1,0 +1,92 @@
+A bioquímica tem umm leque de estudos, onde seus diferentes processos são comuns a todos os organismos vivos.
+
+São processos complexos e organizados que visam produzir energia aos sistemas vivos, capazer de se replicar e remontar através de mecanismos que reagem às mudanças no ambiente, com funções definidas para os componentes, com iterações reguladas entre elas.
+
+A maioria ds organismos vivos são celulares.
+
+As células são estruturas distintas de 5 a 100 micrometros com um núcleo - mais importante e que carrega a informação genética - envolvido por uma membrana plasmática e contendo DNA e proteínas, além de organelas e citosol, que é um conjunto de diferentes componentes desde íons, moléculas, proteínas, ribossomos, proteossomos e mais.
+
+Na árvore filogenética da vida os procariótos (arqueobactérias e eubactérias) e eucariótos são estruturas unicelulares que descendem umas de estruturas mais simples para outras mais complexas.
+
+As célula procariontes não têm organelas membranosas e o material genético está no citoplasma, e as células eucariontes possuem organelas membranosas e material genético dentro do núcleo.
+
+Das arqueobactérias (arqueo=antigo/primitivo) se descendem as eubactérias, diferenciadas de acordo com a estruturação de algumas moléculas como os ácidos nucléicos (RNA ribossômico) e elementos integrantes tanto da membrana plasmática quanto da parede celular, e os eucariótos.
+
+As arqueobactérias formam um grupo restrito de organismos procariontes com baixa diversidade de espécies, como os halófilos extremos (do grego halo=sal + filo=amigo), os seres metanogênicos (que têm respiração anaeróbica com CO2) e os termófilos extremos, caracterizados por terem uma membrana celular ricas em lípidos saturados e que contêm enzimas que lhes permitem trabalhar em condições extremas.
+
+As células são compostas de estruturas complexas apesar de formadas por moléculas pequenas e simples.
+
+A composição celular é bem descrita no slide 8 da aula inclusive detalhando as composições das células animal e vegetal.
+
+A organização molecular das células cresce em níveis, que são quatro: unidades monométricas, macromoléculas, complexos supramoleculares e células e organelas.
+
+Nas células vegetais, no nível 1 temos os nucleotídeos, aminoácidos, lipídeos e glicídeos. No nível 2 temos o DNA composto pelos nucleotídeos,  as proteínas que são polímeros de aminoácidos e a celulose formada composta por glicídeos. No nível 3 temos os cromossomos compostos de DNA, a membrana plasmática composta de proteínas e lipídeos e a parede celular composta de celulose. No nível 4 temos as células e organelas.
+
+A consulta completa das relações estruturais do metabolísmo humano é descrita através do mapa metabólico (MM).
+
+No MM pode-se observar as reações primárias e secundárias, respectivamente as necessárias e as que oorrem em processos paralelos entre os componentes presentes.
+
+Temos os carbohidratos, os lípídeos, os ácidos nucléicos DNA e RNA e as proteínas, que são os principais compostos moleculares presentes no metabolismo.
+
+No centro do MM temos as diversas rotas  dos ciclos metabólicos, como da coenzima do acetil com a enzima A, formando diversos produtos metabólicos, muitos sendo secundários, conceito atribuido mas que podemos questionar por ser importante para algumas espécies e, por isso, sendo referido por vezes como metabolismo especial.
+
+
+Na química dos produtos naturais são importantes as rotas do Acetil enzima A e do metalonato.
+
+O acetil coA forma a classe dos polifetídeos, que são unidades com 3 carbonos sendo um formando carbonila, que vão se ligando, através de processos enzimáticos: ciclização, oxidação do carbono, com redução da carbonila, e hidroginação. As reações ocorrem e são formadas cadeias de poliacetídeos.
+
+Também metabolismos secundários as rotas dos terpenos e os terpenídeos, derivados das unidades do isopreno presentes na rota do metalonato.
+
+Os átomos e moléculas das células e seus macrocomponentes têm propriedades que obedecem leis da químicas e da físicas quando analisadas isoladamente, que em conjunto reagem formando sistemas biológicos, através de processos que não quebram a primeira lei da termodinâmica em que a quantidade de calor absorvido por um sistema está relacionado com o trabalho exercido pelo sistema.
+
+Essas biomoléculas simples são basicamente constituidas por carbono (C), hidrogênio (C), oxigênio (O) e nitrogênio (N), resumo da vida constituindo 99% da massa biológica.
+
+Também temos outros átomos que participam desses processos biológicos, sendo os essênciais além dos principais o sódio (Na) e Potássio (K) - metais alcalinos, cálcio (Ca) - metal alcanino terroso, fósforo (P) e enxofre (S) - não metais, e o cloro (halogênio).
+
+Outros que também participam são o magnésio (Mg) - metal alcalino terroso, vanádio (V), cromo (Cr), manganês, (Mn) ferro (Fe), cobalto (Co), níquel (Ni), cobre (Co), zinco (Zn)e molibdênio (Mo)- metais de transição, selenio (Se) - não metal, e iodo (I) (halogênio).
+
+A estruturação dos compostos biológicos dependerá os compostos basicamente de C serão organizados com os elementos presentes mas moléculas em função da geometria, rotação, dilatação dos compostos tetraétricos, do ângulo de ligação.
+
+Os principais compostos de carbono são a hidroxíla (CH), carbolina(CO) - aldeído (RCOH) e cetonas, carboxila (COOH), metila (CH3), etila, fenila, etc. Do nitrogênio temos a amida e amina e do fósforo a fosforila e o fosfoanidrito.
+
+Na molécula do acetil-CoA encontramos diversos grupos funcionais: tioéster, amido, metil, hidróxila, fosforila, fosfoanitrido e imidazol. O slide 15 da aula 1 apresenta molécula completa. Ocorrem reações entre as extremidades dessa molécula.
+
+As principais interações intermoleculares estão relacionadas com as propriedades químicas e físicas das moléculas.
+
+Na molécula acetil-coA o grupo fosforil tem carga negativa que no meio aquoso estabelece uma ligação dipolo com a molécula polar da água, outras moléculas ou com a própria molécula do acetil-coA.
+
+Nos grupos apolares como o metil podem ocorrer ligações fracas com a de Van der Vaal mas que não são desprezíveis.
+
+Os grupos hidroxílas podem realizar ligações fortes de hidrogênio, que quase se assemelham às ligações covalentes.
+
+Na configuração e formação das moléculas os isômeros geométricos determinam características diferenciadas, como o ácido maléico e ácido fumárico.
+
+Nos meios biológicos todas as reações são estereoespecíficas, com moléculas com a mesma constituição mas distribuição espacial diferentes. Podem ser enantiômeros (com imagem especular) ou diasteroisômeros (ou diastereômeros, sem imagens especulares).
+
+Os carbonos estereocéntricos são aqueles que geram estereoisômeros. Sua primeira regra é ter 4 substituites diferentes com carbonos estereogênicos.
+
+Temos também os isômeros óticos com moodificação pela luz da rotação para direita ou para esquerda. O (R)-Carvone produz gosto de hortelã e o (S)-Carvone produz o gosto de cominho; o o aspartame pode ser doce ou amargo.
+
+A maior parte das biomoléculas são polímeros formados pela ligação de unidades monoméricas simples. Um monômero é uma molécula que forma a unidade básica dos polímeros, que são os blocos de construção das proteínas.
+
+A polimerização é o processso de ligação dos monômeros para formar moléculas de cadeia repetidas, de origem natural ou sintética.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

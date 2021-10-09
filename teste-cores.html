@@ -1,0 +1,133 @@
+﻿<!doctype html>
+<html lang="pt-br">
+
+	<head>
+		<title>Tabela Periódica 3D</title>
+		<meta property="og:SiteName" content="Oficina RPT"/>
+		<meta property="og:url" content="https://rpt.com.br"/>
+		<meta property="og:title" content="Orbitais Atômicos 3D"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:description" content="Tabela Períodica 3D dos Orbitais Atômicos 3D reproduzindo o modelo das Funções de Ondas de Schrödinger"/>
+		<meta property="og:image" content="src/app/atom/img/logo/logo-rpt.atomo.01a.png"/>
+		<meta property="og:image:type" content="src/app/atom/image/png">
+		<meta property="og:image:width" content="335">
+		<meta property="og:image:height" content="193">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<!--base href="http://www.rpt.com.br/quimica-curso-orbitais-atomicos-3d/31-quimica/cursos/orbitais-atomicos-3d/217-setimo-periodo" /-->
+		<meta name="keywords" content="computação, química, química computacional, html, css, javascript, projetos, estudos, cursos" />
+		<meta name="rights" content="Oficina RPT" />
+		<meta name="author" content="Betobyte" />
+		<meta name="description" content="Oficina RPT de produção de aplicativos 3D e de Inteligência Artificial com química." />
+		<meta name="generator" content="Oficina RPT de Química Computacional" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+	</head>
+	<body onload="iniciar()">
+		<div id="id-cores"></div>
+		<style>
+			divx {
+ 			   display: none;
+			}
+			a:hover + div {
+    			display: block;
+			}
+		</style>
+		<script>
+
+		function gethexval(val) {
+			let s = val.toString(16);
+			return s.length < 2 ? "0" + s : s;
+		}
+
+		function gethex(r,g,b) {
+			return gethexval(r) + gethexval(g) + gethexval(b);
+		}
+
+		function gethexrgb(r,g,b) {
+			return gethex(r,g,b).toUpperCase() + "-" + getrgb(r,g,b);
+		}
+
+		function selectColor(r,g,b) {
+			let str = '<td title=' + gethexrgb(r,g,b) +
+			'><div style="width: 8px; height: 8px; background: #' + gethex(r,g,b) + 
+			'"></div></td>';
+			return str;
+		}
+
+		function getrgbargs(r,g,b) {
+			return "" + r + "," + g + "," + b;
+		}
+
+		function getrgb(r,g,b) {
+			return "rgb(" + getrgbargs(r,g,b) + ")";
+		}
+
+		function xcopy(str) {
+			navigator.clipboard.writeText(str);
+			alert(str);
+		}
+
+
+		function iniciar() {
+			str = "<table>";
+			str += "<tr>";
+			str += "<td>x</td>";
+			str += "<td>y</td>";
+			str += "<td>z</td>";
+			str += "<td>s</td>";
+			str += "<td>p</td>";
+			str += "<td>d</td>";
+			str += "<td>f</td>";
+			str += "</tr>";
+			str += "<tr>";
+			str += selectColor(255,0,0);
+			str += selectColor(0,128,0);
+			str += selectColor(0,0,255);
+			str += selectColor(160,240,128);
+			str += selectColor(160,160,0);
+			str += selectColor(255,160,0);
+			str += selectColor(176,0,255);
+			str += "</tr>";
+			str += "<tr>";
+			str += selectColor(255,0,128);
+			str += selectColor(0,192,0);
+			str += selectColor(32,176,240);
+			str += selectColor(208,255,160);
+			str += selectColor(208,208,144);
+			str += selectColor(255,208,64);
+			str += selectColor(176,144,255); 
+			str += "</tr>";
+			str += "</table>";
+			str += "<br>";
+			str += "<table>";
+			let sepi = "", r, g, b, raux, gaux, baux;
+			for (r = 0; r < 17; r++) {
+				raux = r*16;
+				if (raux === 256) raux--;
+				if ((r % 6) < 1) str += sepi + "<tr>";
+				str += "<td><table>";
+				for (g = 0; g < 17; g++) {
+					gaux = g*16;
+					if (gaux === 256) gaux--;
+					str += "<tr>";
+					for (b = 0; b < 17; b++) {
+						baux = b*16;
+						if (baux === 256) baux--;
+						str += '<td title='+gethexrgb(raux,gaux,baux) +
+							'><div style="width: 8px; height: 8px; background: ' +
+							getrgb(raux,gaux,baux) +
+							'" onclick="xcopy(\'' + getrgbargs(raux,gaux,baux) + '\')"></div></td>';
+					}
+					str += "</tr>";
+				}
+				str += "</table></td>";
+				sepi = "</tr>";
+			}
+			str += "</tr>";
+			document.getElementById('id-cores').innerHTML = str;
+		}
+	</script>
+	</body>
+</html>

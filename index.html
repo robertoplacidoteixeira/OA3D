@@ -1,0 +1,194 @@
+﻿<!doctype html>
+<html lang="pt-br">
+
+	<head>
+		<title>Tabela Periódica 3D</title>
+		<meta property="og:SiteName"     content="Oficina RPT"/>
+		<meta property="og:url"          content="https://rpt.com.br"/>
+		<meta property="og:title"        content="Orbitals Atômicos 3D"/>
+		<meta property="og:type"         content="website"/>
+		<meta property="og:description"  content="Tabela Períodica 3D dos Orbitals Atômicos 3D reproduzindo o modelo das Funções de Ondas de Schrödinger"/>
+		<meta property="og:image"        content="img/logo/logo-rpt.atomo.png"/>
+		<meta property="og:image:type"   content="image/png">
+		<meta property="og:image:width"  content="335">
+		<meta property="og:image:height" content="193">
+		<meta name="viewport"            content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<!--base href="http://www.rpt.com.br/quimica-curso-orbitals-atomicos-3d/31-quimica/cursos/orbitals-atomicos-3d/217-setimo-period" /-->
+		<meta name="keywords" content="computação, química, química computacional, html, css, javascript, projetos, estudos, cursos" />
+		<meta name="rights" content="Oficina RPT" />
+		<meta name="author" content="Betobyte" />
+		<meta name="description" content="Oficina RPT de produção de aplicativos 3D e de Inteligência Artificial com química." />
+		<meta name="generator" content="Oficina RPT de Química Computacional" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+	</head>
+
+	<body onload="iniciar();">
+		<input id="toggle" type="checkbox" name="toggle">
+
+		<ul class="navigation-menu">
+			<li><a href="#" onclick="$g.app.controleJanela('janelaModalTabelaPeriodica');">Elementos</a></li>
+			<li><a href="#" onclick="$g.app.controleJanela('janelaModalDadosElemento');">Dados</a></li>
+			<li><a href="#" onclick="$g.app.controleJanela('janelaModalVisoesAtomo');">Visões</a></li>
+			<li><a href="#" onclick="$g.app.controleJanela('janelaModalAjuda');">Ajuda</a></li>
+		</ul>
+
+		<div class="navbar">
+		  <label for="toggle"><i class="fa fa-bars"></i>Tabela Periódica 3D</label>
+		</div>
+
+		<div id="id-div-rpt">
+			<div>
+				<div id="id-dbe-label-rpt" class="dbe-label">RPT</div>
+				<div id="id-dbe-valor-rpt" class="dbe-valor">www.rpt.com.br</div>
+			</div>
+		</div>
+
+		<div id="id-div-versao">
+			<div>
+				<div id="id-dbe-label-versao" class="dbe-label">versão:</div>
+				<div id="id-dbe-valor-versao" class="dbe-valor"></div>
+			</div>
+		</div>
+
+		<div id="id-div-data-basicos-elemento">
+			<div>
+				<div id="id-dbe-label-Z" class="dbe-label">Z:</div>
+				<div id="id-dbe-valor-Z" class="dbe-valor"></div>
+			</div>
+			<div>
+				<div id="id-dbe-label-simbolo" class="dbe-label">Símbolo:</div>
+				<div id="id-dbe-valor-simbolo" class="dbe-valor"></div>
+			</div>
+			<div>
+				<div id="id-dbe-label-nome" class="dbe-label">nome:</div>
+				<div id="id-dbe-valor-nome" class="dbe-valor"></div>
+			</div>
+			<div>
+				<div id="id-dbe-label-radius" class="dbe-label">radius:</div>
+				<div id="id-dbe-valor-radius" class="dbe-valor"></div>
+			</div>
+		</div>
+
+		<div id="id-div-modelo-orbital-3d" class="content"></div>
+		<div id="id-div-controle-arvore">
+			<div id="id-arvore"></div>
+			<!--div id="id-rodape-arvore"-->
+			</div>
+		</div>
+
+		<div id="id-div-data-elemento"></div>
+		
+		<div id="id-div-tabela-periodica"></div>
+		
+		<div id="id-div-ajuda"></div>
+
+		<!--input id = "id-botao-fechar" type="image" src="../../img/icones/fechar.png" alt="Fechar" width="123" height="123" onclick="alert('aqui'); fechar();"-->
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173567595-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-173567595-2');
+		</script>	
+
+		<link rel="stylesheet" href="src/app/atom/css/112-orbitais3d.css">
+		<link rel="stylesheet" href="src/app/atom/css/113-menu.css">
+		<link rel="stylesheet" href="src/app/atom/css/122-orbitais3d-tabela-periodica.css">
+		<link rel="stylesheet" href="src/app/atom/css/132-orbitais3d-data-elemento.css">
+		<link rel="stylesheet" href="src/app/atom/css/136-orbitais3d-ajuda.css">
+		<link rel="stylesheet" href="oslib/jstree-3.3.11/themes/default/style.css" />
+		<!--link rel="stylesheet" href="oslib/fontawesome/5.15.2/css/fontawesome.min.css"-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+		<script src="oslib/stats-r124.min.js"></script> 
+		<script src="oslib/dat-gui-r124.min.js"></script>
+		<script src="oslib/jquery-3.5.1.min.js"></script>
+		<script src="oslib/jquery-ui-1.12.1.min.js"></script>
+		<!--script src="oslib/jquery.fancytree-all-deps-2.37.0.min.js"></script-->
+		<!--script src="oslib/three-r124.min.js"></script-->
+		<!--script src="/rpt/oslib/js/threejs/r124/three.module.js"></script-->
+		<script src="oslib/Detector.js"></script>
+		<script src="oslib/jstree-3.3.11/jstree.js"></script>
+
+		<script src="oslib/js/threejs/r124/build/three.min.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/utils/GeometryUtils.js"></script>
+
+		<script src="oslib/js/threejs/r124/examples/js/shaders/ConvolutionShader.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/shaders/CopyShader.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/shaders/FilmShader.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/shaders/FXAAShader.js"></script>
+
+		<script src="oslib/js/threejs/r124/examples/js/postprocessing/EffectComposer.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/postprocessing/RenderPass.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/postprocessing/ShaderPass.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/postprocessing/MaskPass.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/postprocessing/BloomPass.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/postprocessing/FilmPass.js"></script>
+
+		<!--script src="oslib/js/threejs/r124/examples/js/Detector.js"></script-->
+		<script src="oslib/js/threejs/r124/examples/js/controls/TrackballControls.js"></script>
+		<script src="oslib/js/threejs/r124/examples/js/libs/stats.min.js"></script>
+
+		<script src="src/rptlib/rptCommonAncestor.js"></script>
+		<script src="src/rptlib/rptSceneMaker.js"></script>
+		<script src="src/rptlib/rptLinkedList.js"></script>
+		<script src="src/rptlib/rptGeoStock.js"></script>
+		<script src="src/rptlib/rptGeoDataFactory.js"></script>
+		<script src="src/rptlib/rptGeoFactory.js"></script>
+		<script src="src/rptlib/rptMeshFactory.js"></script>
+		<script src="src/rptlib/rptFonts.js"></script>
+		<script src="src/rptlib/rptFont.js"></script>
+		<script src="src/rptlib/rptApp.js"></script>
+		<script src="src/rptlib/rptNavControl/rptNavControl.js"></script>
+
+		<script src="src/studddio/013-S3dObject3D.js"></script>
+		<script src="src/studddio/014-S3dMesh.js"></script>
+		<script src="src/studddio/015-S3dFactory.js"></script>
+		<script src="src/studddio/018-S3dPos.js"></script>
+		<script src="src/studddio/019-S3dData.js"></script>
+		<script src="src/studddio/031-S3dBox.js"></script>
+		<script src="src/studddio/032-S3dPlane.js"></script>
+		<script src="src/studddio/034-S3dPlaneChain.js"></script>
+		<!--script src="src/studddio/041-S3dText.js"></script>
+		<script src="src/043-S3dTexts.js"></script-->
+		<script src="src/studddio/050-S3dActKit.js"></script>
+		<script src="src/studddio/051-S3dAct.js"></script>
+		<script src="src/studddio/052-S3dActFrame.js"></script>
+		<script src="src/studddio/061-S3dRichCtrl.js"></script>
+		<script src="src/studddio/063-S3dRichChar.js"></script>
+		<script src="src/studddio/064-S3dRichText.js"></script>
+		<script src="src/studddio/065-S3dRichTexts.js"></script>
+		<script src="src/studddio/066-S3dRichMemo.js"></script>
+		<script src="src/studddio/071-S3dAction.js"></script>
+		<script src="src/studddio/078-S3dActions.js"></script>
+
+		<script src="src/atom/201-metadata.js"></script>
+		<script src="src/atom/241-electron.js"></script>
+		<script src="src/atom/242-nucleus.js"></script>
+		<script src="src/atom/251-orbital.js"></script>
+		<script src="src/atom/252-sOrbital.js"></script>
+		<script src="src/atom/253-lobeOrbital.js"></script>
+		<script src="src/atom/254-pOrbital.js"></script>
+		<script src="src/atom/255-dOrbital.js"></script>
+		<script src="src/atom/256-fOrbital.js"></script>
+		<script src="src/atom/261-layout.js"></script>
+		<script src="src/atom/262-atomLayout.js"></script>
+		<script src="src/atom/263-basicAtomLayout.js"></script>
+		<script src="src/atom/264-pointBasicAtomLayout.js"></script>
+		<script src="src/atom/271-atom.js"></script>
+		
+		<script src="src/app/atom/281-atomApp.js"></script>
+		<script src="src/app/atom/282-oa3dApp.js"></script>
+		<script src="src/app/atom/285-tp3dAct.js"></script>
+		<script src="src/app/atom/286-tp3dActFrame.js"></script>
+		<script src="src/app/atom/287-tp3dGlobal.js"></script>
+		<script src="src/app/atom/288-tp3dApp.js"></script>
+		<script src="src/app/atom/299-startAtom3dApp.js"></script>
+
+	</body>
+</html>
